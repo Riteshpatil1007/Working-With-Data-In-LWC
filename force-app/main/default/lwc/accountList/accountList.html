@@ -1,0 +1,14 @@
+<template>
+    <template if:true={errors}>
+        <p>{errors}</p>
+    </template>
+    <lightning-card title="Account List" icon-name="custom:custom83">
+        <template if:true={accounts.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts.data}
+                columns={columns}>
+           </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
